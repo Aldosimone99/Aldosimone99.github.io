@@ -247,22 +247,23 @@ body {
     }
 }
 
+
 /* Sezione Skills */
 .skills {
     background: linear-gradient(180deg, rgba(255, 193, 7, 0.208) 0%, rgba(255, 193, 7, 0) 40%);
     text-align: center;
     color: #fff;
     padding: 40px 0;
-    height: 100vh;
-    margin-top: 200px;
+    height: auto; /* Cambiato per permettere un'altezza flessibile */
 
     .skills-header-box {
         background-color: rgba(255, 193, 7, 0.208);
         border-radius: 10px;
         padding: 20px;
-        margin: 130px auto 40px;
+        margin: 30px auto; /* Modificato per un margine più contenuto */
         text-align: center;
-        width: 400px;
+        width: 90%; /* Larghezza responsiva */
+        max-width: 400px; /* Limitato per evitare che diventi troppo largo */
         box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
         border: 2px solid rgba(255, 193, 7, 1);
         color: white;
@@ -283,17 +284,18 @@ body {
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
-            width: 300px;
+            width: 100%; /* Impostato a 100% per adattarsi al contenitore */
+            max-width: 300px; /* Mantiene un limite massimo */
             box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-            border: 2px solid rgba(255, 193, 7, 1);
+            border: 2px solid rgba(255, 193, 7, 1); /* Effetto bordo neon */
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             img {
-                max-width: 80%; 
-                height: auto;  
-                margin: 0 auto;   
-                display: block;   
+                max-width: 70%; /* Dimensione dell'immagine proporzionale */
+                height: auto; 
+                margin: 0 auto; 
+                display: block; 
             }
 
             &:hover {
@@ -302,36 +304,38 @@ body {
             }
         }
     }
-}
 
-@media (max-width: 768px) {
-    .skills {
-        padding: 20px 0;
+    /* Media Query per dispositivi mobili */
+    @media (max-width: 768px) {
+        .skills-container {
+            .skill-box {
+                width: 90%; /* Maggiore larghezza responsiva per mobile */
+                margin: 10px auto; /* Centra la skill-box */
+            }
 
+            img {
+                max-width: 50%; /* Dimensione delle immagini su dispositivi più piccoli */
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
         .skills-header-box {
-            margin: 20px auto;
-            font-size: 25px;
-            box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-            border: 2px solid rgba(255, 193, 7, 1);
-            margin-top: 25px;
+            width: 90%; /* Maggiore larghezza per header box su schermi piccoli */
         }
 
         .skills-container {
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            margin-top: 50px;
-
             .skill-box {
-                padding: 15px;
-                margin: 5px 0;
-                width: 90%;
-                max-width: 100%;
+                width: 95%; /* Ancora più larga su schermi molto piccoli */
+                margin: 10px auto; /* Centra la skill-box */
+            }
+
+            img {
+                max-width: 60%; /* Immagini più piccole per schermi molto piccoli */
             }
         }
     }
 }
-
 
 /* Sezione Contatti */
 .contact {

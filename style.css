@@ -12202,16 +12202,17 @@ body {
   text-align: center;
   color: #fff;
   padding: 40px 0;
-  height: 100vh;
-  margin-top: 200px;
+  height: auto; /* Cambiato per permettere un'altezza flessibile */
+  /* Media Query per dispositivi mobili */
 }
 .skills .skills-header-box {
   background-color: rgba(255, 193, 7, 0.208);
   border-radius: 10px;
   padding: 20px;
-  margin: 130px auto 40px;
+  margin: 30px auto; /* Modificato per un margine più contenuto */
   text-align: center;
-  width: 400px;
+  width: 90%; /* Larghezza responsiva */
+  max-width: 400px; /* Limitato per evitare che diventi troppo largo */
   box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
   border: 2px solid rgb(255, 193, 7);
   color: white;
@@ -12231,14 +12232,15 @@ body {
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-  width: 300px;
+  width: 100%; /* Impostato a 100% per adattarsi al contenitore */
+  max-width: 300px; /* Mantiene un limite massimo */
   box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-  border: 2px solid rgb(255, 193, 7);
+  border: 2px solid rgb(255, 193, 7); /* Effetto bordo neon */
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .skills .skills-container .skill-box img {
-  max-width: 80%;
+  max-width: 70%; /* Dimensione dell'immagine proporzionale */
   height: auto;
   margin: 0 auto;
   display: block;
@@ -12247,31 +12249,28 @@ body {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 193, 7, 0.7);
 }
-
 @media (max-width: 768px) {
-  .skills {
-    padding: 20px 0;
-  }
-  .skills .skills-header-box {
-    margin: 20px auto;
-    font-size: 25px;
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-    border: 2px solid rgb(255, 193, 7);
-    margin-top: 25px;
-  }
-  .skills .skills-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 50px;
-  }
   .skills .skills-container .skill-box {
-    padding: 15px;
-    margin: 5px 0;
-    width: 90%;
-    max-width: 100%;
+    width: 90%; /* Maggiore larghezza responsiva per mobile */
+    margin: 10px auto; /* Centra la skill-box */
+  }
+  .skills .skills-container img {
+    max-width: 50%; /* Dimensione delle immagini su dispositivi più piccoli */
   }
 }
+@media (max-width: 480px) {
+  .skills .skills-header-box {
+    width: 90%; /* Maggiore larghezza per header box su schermi piccoli */
+  }
+  .skills .skills-container .skill-box {
+    width: 95%; /* Ancora più larga su schermi molto piccoli */
+    margin: 10px auto; /* Centra la skill-box */
+  }
+  .skills .skills-container img {
+    max-width: 60%; /* Immagini più piccole per schermi molto piccoli */
+  }
+}
+
 /* Sezione Contatti */
 .contact {
   background: linear-gradient(180deg, rgba(255, 99, 132, 0.208) 0%, rgba(255, 99, 132, 0) 40%);
