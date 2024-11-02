@@ -12173,6 +12173,7 @@ body {
 @media (max-width: 768px) {
   .about {
     margin-top: 215px;
+    margin-bottom: 100px;
   }
   .about .about-title-box,
   .about .about-content-box {
