@@ -7304,7 +7304,7 @@ textarea.form-control-lg {
   display: table-cell !important;
 }
 
-.d-flex, .contact .social-links, .contact .contact-container, .skills .skills-container {
+.d-flex, .contact .social-links, .contact .contact-container {
   display: flex !important;
 }
 
@@ -12218,6 +12218,7 @@ body {
   font-size: 30px;
 }
 .skills .skills-container {
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -12232,9 +12233,15 @@ body {
   margin: 10px;
   width: 300px;
   box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-  border: 2px solid rgb(255, 193, 7); /* Effetto bordo neon */
+  border: 2px solid rgb(255, 193, 7);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills .skills-container .skill-box img {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
 .skills .skills-container .skill-box:hover {
   transform: scale(1.05);
@@ -12328,7 +12335,6 @@ body {
   height: 50px;
 }
 
-/* Media Query per dispositivi mobili */
 @media (max-width: 768px) {
   .contact .header-box {
     width: 95%;

@@ -195,7 +195,7 @@ body {
     }
 
     .about-button {
-        @extend .btn; // Estende le classi di Bootstrap
+        @extend .btn; 
         display: inline-block;
         padding: 15px 30px;
         background-color: rgba(2, 111, 45, 0.422);
@@ -270,7 +270,7 @@ body {
     }
 
     .skills-container {
-        @extend .d-flex;
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -285,9 +285,16 @@ body {
             margin: 10px;
             width: 300px;
             box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-            border: 2px solid rgba(255, 193, 7, 1); /* Effetto bordo neon */
+            border: 2px solid rgba(255, 193, 7, 1);
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            img {
+                max-width: 80%; 
+                height: auto;  
+                margin: 0 auto;   
+                display: block;   
+            }
 
             &:hover {
                 transform: scale(1.05);
@@ -335,7 +342,7 @@ body {
     height: 100vh;
 
     .contact-container {
-        @extend .d-flex; // Estende le classi di Bootstrap
+        @extend .d-flex;
         flex-direction: column; 
         justify-content: center; 
         align-items: center; 
@@ -358,7 +365,7 @@ body {
     }
 
     .social-links {
-        @extend .d-flex; // Estende le classi di Bootstrap
+        @extend .d-flex;
         justify-content: center; 
         align-items: center; 
         flex-wrap: wrap; 
@@ -399,7 +406,7 @@ body {
     }
 }
 
-/* Media Query per dispositivi mobili */
+
 @media (max-width: 768px) {
     .contact {
         .header-box {
@@ -443,10 +450,10 @@ body {
 }
 
 
-// Menu sticky mobile fisso
+
 .sticky-menu {
-    display: none; // Nascondi su desktop
-    position: fixed; // Fissa in fondo allo schermo
+    display: none;
+    position: fixed; 
     bottom: 0px;
     width: 100%;
     background-color: #000000ca;
@@ -466,7 +473,7 @@ body {
     }
 }
 
-// Media query per schermi piccoli
+
 @media (max-width: 768px) {
     .sticky-menu {
         display: flex;
