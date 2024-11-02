@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+}
+
+.cv-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+.header p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+section {
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #444;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+}
+
+.job, .education-item {
+    margin-top: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 5px 0;
+}
