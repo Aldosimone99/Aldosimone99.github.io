@@ -1,4 +1,3 @@
-/* Import Bootstrap */
 @import '~bootstrap/scss/bootstrap';
 
 /* Stile di base */
@@ -255,16 +254,17 @@ body {
     text-align: center;
     color: #fff;
     padding: 40px 0;
-    height: auto; /* Cambiato per permettere un'altezza flessibile */
+    height: auto; 
+}
 
     .skills-header-box {
         background-color: rgba(255, 193, 7, 0.208);
         border-radius: 10px;
         padding: 20px;
-        margin: 30px auto; /* Modificato per un margine più contenuto */
+        margin: 30px auto; 
         text-align: center;
-        width: 90%; /* Larghezza responsiva */
-        max-width: 400px; /* Limitato per evitare che diventi troppo largo */
+        width: 90%; 
+        max-width: 400px;
         box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
         border: 2px solid rgba(255, 193, 7, 1);
         color: white;
@@ -285,15 +285,15 @@ body {
             border-radius: 10px;
             padding: 20px;
             margin: 10px;
-            width: 100%; /* Impostato a 100% per adattarsi al contenitore */
-            max-width: 300px; /* Mantiene un limite massimo */
+            width: 100%;
+            max-width: 300px; 
             box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-            border: 2px solid rgba(255, 193, 7, 1); /* Effetto bordo neon */
+            border: 2px solid rgba(255, 193, 7, 1); 
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
 
             img {
-                max-width: 70%; /* Dimensione dell'immagine proporzionale */
+                max-width: 70%; 
                 height: auto; 
                 margin: 0 auto; 
                 display: block; 
@@ -306,34 +306,33 @@ body {
         }
     }
 
-    /* Media Query per dispositivi mobili */
+
     @media (max-width: 768px) {
         .skills-container {
             .skill-box {
-                width: 90%; /* Maggiore larghezza responsiva per mobile */
-                margin: 10px auto; /* Centra la skill-box */
+                width: 90%; 
+                margin: 10px auto; 
             }
 
             img {
-                max-width: 50%; /* Dimensione delle immagini su dispositivi più piccoli */
+                max-width: 50%; 
             }
         }
     }
 
     @media (max-width: 480px) {
         .skills-header-box {
-            width: 90%; /* Maggiore larghezza per header box su schermi piccoli */
+            width: 90%; 
         }
 
         .skills-container {
             .skill-box {
-                width: 95%; /* Ancora più larga su schermi molto piccoli */
-                margin: 10px auto; /* Centra la skill-box */
+                width: 95%;
+                margin: 10px auto; 
             }
 
             img {
-                max-width: 60%; /* Immagini più piccole per schermi molto piccoli */
-            }
+                max-width: 60%; 
         }
     }
 }
