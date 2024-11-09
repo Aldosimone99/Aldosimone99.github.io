@@ -1,0 +1,88 @@
+/* Section About */
+.about {
+    margin-top: -8px;
+    background: linear-gradient(180deg, rgba(0, 201, 80, 0.208) 0%, rgba(0, 201, 81, 0) 40%);
+    text-align: center;
+    color: #fff;
+    padding: 40px 50px;
+    height: 100vh;
+
+    .about-title-box,
+    .about-content-box {
+        background-color: rgba(1, 37, 16, 0.236);
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid rgba(0, 201, 80, 0.5);
+        box-shadow: 0 0 10px rgba(0, 201, 80, 0.5),
+                    0 0 20px rgba(0, 201, 80, 0.7),
+                    0 0 30px rgba(0, 201, 80, 0.191);
+        margin: 20px auto;
+        max-width: 900px;
+        width: 90%;
+
+        &:first-of-type {
+            margin-top: 130px;
+            font-size: 20px;
+        }
+
+        &:last-of-type {
+            margin-top: 10px;
+            font-size: 25px;
+        }
+    }
+
+    .about-button {
+        @extend .btn; 
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: rgba(2, 111, 45, 0.422);
+        color: #fff;
+        border: 2px solid rgba(0, 128, 0, 0.781);
+        border-radius: 5px;
+        text-decoration: none;
+        margin-top: 20px;
+        font-size: 20px;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+        &:hover {
+            background-color: rgba(0, 201, 80, 1);
+            box-shadow: 0 0 10px rgba(0, 201, 80, 0.5),
+                        0 0 20px rgba(0, 201, 80, 0.7),
+                        0 0 30px rgba(0, 201, 80, 1);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        margin-top: 215px;
+        margin-bottom: 200px;
+
+        .about-title-box,
+        .about-content-box {
+            font-size: 16px;
+            padding: 15px;
+            width: 95%;
+        }
+
+        .about-button {
+            font-size: 18px; 
+            padding: 12px 25px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title-box,
+    .about-content-box {
+        font-size: 16px; 
+        padding: 10px; 
+    }
+
+    .about-button {
+        font-size: 16px; 
+        padding: 10px 20px; 
+    }
+}
+
+

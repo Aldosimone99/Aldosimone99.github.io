@@ -1,0 +1,199 @@
+// main.scss
+@import '/scss/skills.scss';
+@import '/scss/about.scss';
+@import '/scss/contacts.scss';
+
+/* Base Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: '2P', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: '2P';
+    src: url('/fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: #14161A;
+    color: #333;
+}
+
+/* Section Hero */
+.hero {
+    color: white;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: #14161A;
+    background-image: url('/2825810.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+
+    h1, p {
+        color: #fff;
+        font-family: '2P', sans-serif;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    p {
+        font-size: 30px;
+    }
+}
+
+/* Hero Content */
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.73);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin: -450px auto 0; 
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(255, 152, 0, 0.5), 
+                0 0 20px rgba(255, 152, 0, 0.7), 
+                0 0 30px rgba(255, 152, 0, 1);
+}
+
+.nav-blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 185px 0 0;
+    justify-content: center;
+    margin-top: -450px;
+
+    .nav-item {
+        position: relative;
+        background-color: #000000ca;
+        padding: 20px;
+        width: 300px;
+        margin-bottom: 200px;
+        text-align: center;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        &:nth-child(1) {
+            border: 2px solid rgba(76, 175, 80, 1);
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5), 
+                        0 0 20px rgba(76, 175, 80, 0.7), 
+                        0 0 30px rgba(76, 175, 80, 1);
+        }
+
+        &:nth-child(2) {
+            border: 2px solid rgba(255, 193, 7, 1);
+            box-shadow: 0 0 10px rgba(255, 152, 0, 0.5), 
+                        0 0 20px rgba(255, 152, 0, 0.7), 
+                        0 0 30px rgba(255, 152, 0, 1);
+        }
+
+        &:nth-child(3) {
+            border: 2px solid rgba(255, 99, 132, 1);
+            box-shadow: 0 0 10px rgba(255, 99, 132, 0.5), 
+                        0 0 20px rgba(255, 99, 132, 0.7), 
+                        0 0 30px rgba(255, 99, 132, 1);
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 8px;
+            position: relative;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-content {
+        padding: 20px;
+        max-width: 90%;
+        margin-bottom: 10px; 
+    }
+
+    .nav-blocks {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: -450px;
+        align-items: center;
+        padding: 0;
+
+        .nav-item {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            min-width: 80px;
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+
+.sticky-menu {
+    display: none;
+    position: fixed; 
+    bottom: 0px;
+    width: 100%;
+    background-color: #000000ca;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000;
+    border: 2px solid rgba(255, 193, 7, 1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
+
+
+    a {
+        color: #fff;
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .sticky-menu {
+        display: flex;
+        justify-content: space-around;
+    }
+}
