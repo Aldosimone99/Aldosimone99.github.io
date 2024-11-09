@@ -5,6 +5,7 @@
     color: #fff;
     padding: 40px 0;
     height: auto; 
+    margin-top: 300px;
 }
 
     .skills-header-box {
@@ -73,6 +74,7 @@
     @media (max-width: 480px) {
         .skills-header-box {
             width: 90%; 
+            margin-top: 50px;
         }
 
         .skills-container {
