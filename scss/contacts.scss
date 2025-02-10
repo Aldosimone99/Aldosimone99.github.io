@@ -4,7 +4,7 @@
     text-align: center;
     color: #fff;
     padding: 40px 0; 
-    height: 100vh;
+    height: 100vh; // Ensure same height as other sections
 }
 
     .contact-container {
@@ -86,8 +86,7 @@
     }
     
     @media (max-width: 480px) {
-        .social{
-        }
+
         .social-links {
             flex-direction: column; 
         }
