@@ -5,6 +5,7 @@
     color: #fff;
     padding: 40px 0; 
     height: 100vh; // Ensure same height as other sections
+    margin-top: 100px; // Add margin-top to ensure it starts after the skills section
 }
 
     .contact-container {
@@ -70,6 +71,10 @@
     }
     
     @media (max-width: 768px) {
+        .contact {
+            margin-top: 800px; // Further increase margin-top for smaller devices
+        }
+
         .social-links {
             flex-direction: column;
             gap: 10px;
@@ -83,10 +88,18 @@
         }
         .social-icon:last-child {
             margin-bottom: 100px;
+        }
+
+        .contact-container {
+            margin-top: 50px; // Adjust margin-top to ensure proper spacing
+        }
     }
     
     @media (max-width: 480px) {
-
+        .contact {
+            margin-top: 800px; // Further increase margin-top for smaller devices
+        }
+    
         .social-links {
             flex-direction: column; 
         }
@@ -99,5 +112,8 @@
         .social-icon {
             padding: 15px;
         }
+
+        .contact-container {
+            margin-top: 50px; // Adjust margin-top to ensure proper spacing
+        }
     }
-}

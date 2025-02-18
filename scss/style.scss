@@ -166,34 +166,3 @@ body {
         }
     }
 }
-
-
-.sticky-menu {
-    display: none;
-    position: fixed; 
-    bottom: 0px;
-    width: 100%;
-    background-color: #000000ca;
-    padding: 10px 0;
-    text-align: center;
-    z-index: 1000;
-    border: 2px solid rgba(255, 193, 7, 1);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-
-
-    a {
-        color: #fff;
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 1.2rem;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .sticky-menu {
-        display: flex;
-        justify-content: space-around;
-    }
-}

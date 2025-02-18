@@ -75,6 +75,21 @@
     padding: 10px 20px;
   }
 }
+@media (max-width: 400px) {
+  .about {
+    margin-top: 230px;
+    margin-bottom: 230px;
+  }
+  .about-title-box,
+  .about-content-box {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .about-button {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
 /* Section Skills */
 .skills {
   background: linear-gradient(180deg, rgba(255, 193, 7, 0.208) 0%, rgba(255, 193, 7, 0) 40%);
@@ -82,7 +97,6 @@
   color: #fff;
   padding: 40px 0;
   height: 100vh;
-  margin-top: 300px;
 }
 
 .skills-header-box {
@@ -133,7 +147,7 @@
 
 @media (max-width: 768px) {
   .skills-container .skill-box {
-    width: 90%;
+    width: 50%;
     margin: 10px auto;
   }
   .skills-container img {
@@ -142,12 +156,25 @@
 }
 @media (max-width: 480px) {
   .skills-header-box {
-    width: 90%;
+    width: 60%;
     margin-top: 50px;
   }
   .skills-container .skill-box {
     width: 95%;
-    margin: 10px auto;
+    margin-bottom: 20px;
+  }
+  .skills-container img {
+    max-width: 60%;
+  }
+}
+@media (max-width: 400px) {
+  .skills-header-box {
+    width: 70%;
+    margin-top: 50px;
+  }
+  .skills-container .skill-box {
+    width: 95%;
+    margin-bottom: 10px;
   }
   .skills-container img {
     max-width: 60%;
@@ -160,6 +187,7 @@
   color: #fff;
   padding: 40px 0;
   height: 100vh;
+  margin-top: 100px;
 }
 
 .contact-container {
@@ -220,6 +248,9 @@
 }
 
 @media (max-width: 768px) {
+  .contact {
+    margin-top: 800px;
+  }
   .social-links {
     flex-direction: column;
     gap: 10px;
@@ -233,8 +264,14 @@
   .social-icon:last-child {
     margin-bottom: 100px;
   }
+  .contact-container {
+    margin-top: 50px;
+  }
 }
-@media (max-width: 768px) and (max-width: 480px) {
+@media (max-width: 480px) {
+  .contact {
+    margin-top: 800px;
+  }
   .social-links {
     flex-direction: column;
   }
@@ -244,6 +281,9 @@
   }
   .social-icon {
     padding: 15px;
+  }
+  .contact-container {
+    margin-top: 50px;
   }
 }
 /* Base Style */
@@ -385,31 +425,5 @@ body {
     min-width: 80px;
     max-width: 200px;
     margin-bottom: 20px;
-  }
-}
-.sticky-menu {
-  display: none;
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7921568627);
-  padding: 10px 0;
-  text-align: center;
-  z-index: 1000;
-  border: 2px solid rgb(255, 193, 7);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(255, 193, 7, 0.5);
-}
-.sticky-menu a {
-  color: #fff;
-  padding: 10px 15px;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-@media (max-width: 768px) {
-  .sticky-menu {
-    display: flex;
-    justify-content: space-around;
   }
 }/*# sourceMappingURL=style.css.map */
