@@ -147,7 +147,16 @@
 
 @media (max-width: 768px) {
   .skills-container .skill-box {
-    width: 50%;
+    width: 45%;
+    margin: 10px;
+  }
+  .skills-container img {
+    max-width: 50%;
+  }
+}
+@media (max-width: 600px) {
+  .skills-container .skill-box {
+    width: 90%;
     margin: 10px auto;
   }
   .skills-container img {
@@ -160,8 +169,9 @@
     margin-top: 50px;
   }
   .skills-container .skill-box {
-    width: 95%;
-    margin-bottom: 20px;
+    width: 90%;
+    margin: 8px auto;
+    padding: 15px;
   }
   .skills-container img {
     max-width: 60%;
@@ -171,10 +181,12 @@
   .skills-header-box {
     width: 70%;
     margin-top: 50px;
+    font-size: 24px;
   }
   .skills-container .skill-box {
     width: 95%;
-    margin-bottom: 10px;
+    margin: 5px auto;
+    padding: 12px;
   }
   .skills-container img {
     max-width: 60%;
