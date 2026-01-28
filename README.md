@@ -3,69 +3,84 @@
 🌐 **Live Website**  
 https://aldosimone99.github.io
 
-This repository contains the source code for my **personal portfolio website**, built to present my background, technical skills, and projects as a **Frontend / Full-Stack Developer**.
+This repository contains the source code of my **personal portfolio website**, designed to present my profile as a **Frontend Developer (React) with Full-Stack experience**.
 
-The website is deployed via **GitHub Pages** and designed with a strong focus on visual identity, responsiveness, and clarity for recruiters and hiring managers.
+The portfolio is built as a **single-page application (SPA)** and optimized for **US-based recruiters and hiring managers**, with a focus on clarity, fast scanning, and direct access to live projects and contact information.
 
 ---
 
 ## Overview
 
-The portfolio is a **single-page website** composed of multiple sections:
+The website follows a clean, recruiter-friendly structure while preserving a distinctive visual identity.
 
-- Hero / Landing section  
-- About Me  
-- Skills  
-- Contact  
-
-It combines a retro–cyber visual style with clean UI sections to balance personality and professionalism.
+Main goals:
+- Communicate my professional profile in under 30 seconds
+- Highlight **production-ready projects** (web & mobile)
+- Showcase a modern frontend skill set with full-stack awareness
+- Make contact simple and frictionless
 
 ---
 
 ## Sections
 
-### 🏠 Hero Section
-- Introductory landing area
-- Short welcome message
-- Visual focus on identity and style
+### 🏠 Hero
+- Clear professional headline
+- Immediate positioning as Frontend / Full-Stack Developer
+- Quick navigation to key sections
 
 ---
 
 ### 👤 About Me
-- Brief personal introduction
+- Short professional summary
 - Career transition from maritime officer to software development
-- Emphasis on motivation, learning, and long-term growth
-- Direct link to my **Curriculum Vitae**
+- Focus on motivation, continuous learning, and long-term growth
+- Direct access to my **Curriculum Vitae**
+
+---
+
+### 🧩 Projects
+
+Selected, relevant projects are highlighted:
+
+- **CityLife2** — Full-Stack Web Application  
+  Angular frontend + Spring Boot backend, JWT authentication, PostgreSQL, Docker
+
+- **Moya** — iOS App (Live on the App Store)  
+  Video & photo editing app with a dedicated website: https://moyafilm.it
+
+- **Mariner Hub** — iOS App (Live on the App Store)  
+  Utility app designed for maritime professionals
+
+Each project card includes a concise description and direct links (GitHub, website, or App Store).
 
 ---
 
 ### 🛠 Skills
 
-Highlighted technologies and tools:
+Skills are organized in recruiter- and ATS-friendly categories:
 
-- **HTML**
-- **CSS / SCSS**
-- **Bootstrap**
-- **Java**
-- **Angular**
-- **Swift (iOS)**
-
-Each skill is presented visually using icons for immediate readability.
+- **Frontend**: React, JavaScript / TypeScript, HTML5, CSS3, SCSS, Responsive UI
+- **Backend**: Java, Spring Boot, REST APIs, JWT, Spring Security, JPA
+- **Databases**: PostgreSQL, relational modeling
+- **Mobile**: Swift, iOS app lifecycle, App Store deployment
+- **Tools**: Git, GitHub, Docker, Docker Compose, VS Code
+- **Working Style**: clean code, product mindset, collaboration
 
 ---
 
 ### 📬 Contact
 
-Multiple contact options are available:
+The contact section is intentionally minimal and professional:
 
-- Facebook  
-- X (Twitter)  
-- Instagram  
-- LinkedIn  
-- GitHub  
-- Contact Form  
+- **Email** (primary contact)
+- **LinkedIn**
+- **GitHub**
 
-All links open externally to ensure a smooth user experience.
+Additional links are kept secondary.
+
+Micro-copy highlights availability:
+
+> Available for US-based remote opportunities · Timezone friendly (CET / EST overlap)
 
 ---
 
@@ -73,39 +88,34 @@ All links open externally to ensure a smooth user experience.
 
 - **HTML5**
 - **CSS3 / SCSS**
-- **Bootstrap 5**
-- **JavaScript** (basic interactions)
-- **GitHub Pages** for deployment
+- **JavaScript**
+- **GitHub Pages** (deployment)
 
 ---
 
 ## Project Structure
 
-```
+```text
 /
 ├── index.html
 ├── /scss
 │   └── style.css
 ├── /icons
-│   └── skill and social icons
+│   └── UI and social icons
 ├── /Page2
-│   ├── Cv.html
-│   └── contact-form.html
+│   └── Cv.html
 ```
 
 ---
 
 ## Purpose
 
-This portfolio was created to:
+This portfolio is intended to:
 
-- Present my professional profile in a clear and visual way
-- Showcase frontend fundamentals and UI sensibility
-- Act as a central hub linking to:
-  - GitHub projects
-  - Curriculum Vitae
-  - Social profiles
-- Support applications for **remote international roles**, especially US-based companies
+- Support applications for **US-based and international remote roles**
+- Act as a single entry point for recruiters
+- Provide quick access to live projects and code
+- Demonstrate frontend sensibility with full-stack foundations
 
 ---
 
@@ -113,10 +123,10 @@ This portfolio was created to:
 
 **Aldosimone Di Rosa**  
 Frontend Developer (React) · Full-Stack aware  
-📍 Italy · 🌍 Open to US Remote  
+📍 Italy · 🌍 Open to US Remote
 
-- GitHub: https://github.com/Aldosimone99  
-- Portfolio: https://aldosimone99.github.io  
+- Portfolio: https://aldosimone99.github.io
+- GitHub: https://github.com/Aldosimone99
 - LinkedIn: https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/
 
 ---
