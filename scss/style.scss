@@ -1,0 +1,17 @@
+// Main stylesheet - imports all SCSS files
+
+// Variables
+@import 'variables';
+
+// Base styles
+@import 'base';
+
+// Sections
+@import 'hero';
+@import 'about';
+@import 'projects';
+@import 'skills';
+@import 'contacts';
+
+// Responsive design
+@import 'media-queries';

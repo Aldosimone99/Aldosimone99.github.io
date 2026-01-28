@@ -1,0 +1,171 @@
+/* Section Projects */
+.projects {
+    background: linear-gradient(180deg, rgba(0, 191, 255, 0.16) 0%, rgba(0, 191, 255, 0) 40%);
+    text-align: center;
+    color: #fff;
+
+    /* Center section content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* Make the anchor land on a full, clean section (avoid showing the next section) */
+    min-height: 100vh;
+
+    /* Balanced spacing (not too tall, but professional) */
+    padding: 72px 0;
+
+    /* Cleaner anchor landing for in-page links */
+    scroll-margin-top: 0px;
+}
+
+.projects-title-box {
+    background-color: rgba(0, 191, 255, 0.14);
+    border-radius: 16px;
+    padding: 28px 38px;
+    margin: 0 auto 34px;
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 0 16px rgba(0, 191, 255, 0.20);
+    border: 1px solid rgba(0, 191, 255, 0.55);
+    color: white;
+
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+    }
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    width: min(1100px, 92%);
+    max-width: 1100px;
+    margin: 0 auto;
+    margin-bottom: 6px;
+    align-items: stretch;
+    padding-bottom: 8px;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.32);
+    border-radius: 14px;
+    border: 1px solid rgba(0, 191, 255, 0.40);
+    box-shadow: 0 0 14px rgba(0, 191, 255, 0.14);
+    padding: 22px;
+    text-align: left;
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 360px;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 0 18px rgba(0, 191, 255, 0.22);
+    }
+}
+
+.project-header h2 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    line-height: 1.2;
+}
+
+.project-stack {
+    font-size: 14px;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+.project-meta {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-top: 6px;
+}
+
+.project-bullets {
+    margin: 14px 0 16px;
+    padding-left: 18px;
+    flex: 1 1 auto;
+
+    li {
+        margin: 8px 0;
+        line-height: 1.6;
+        font-size: 15px;
+    }
+}
+
+.project-links {
+    /* Keep links pinned to the bottom of the card */
+    margin-top: auto;
+    padding-top: 14px;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+
+    /* Prevent random wrapping that makes cards look misaligned */
+    align-items: stretch;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 14px;
+        border-radius: 12px;
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.55);
+        border: 1px solid rgba(0, 191, 255, 0.35);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+        /* Same height across cards */
+        min-height: 40px;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    a:hover {
+        transform: translateY(-2px);
+        background-color: rgba(0, 191, 255, 0.12);
+        box-shadow: 0 0 12px rgba(0, 191, 255, 0.18);
+    }
+}
+
+.projects-note {
+    width: 90%;
+    max-width: 900px;
+    margin: 16px auto 0;
+    opacity: 0.85;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 64px 0;
+        min-height: 100vh;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+    .project-links {
+        /* Stack buttons vertically on mobile */
+        grid-auto-flow: row;
+        grid-auto-columns: unset;
+    }
+}

@@ -1,0 +1,67 @@
+/* Section About */
+.about {
+    /* Ensure the section fills the viewport when navigated via #about */
+    min-height: 100vh;
+
+    /* Prevent the next section from peeking in when landing here */
+    padding: 120px 40px 120px;
+
+    /* Improve anchor navigation behavior */
+    scroll-margin-top: 24px;
+
+    background: linear-gradient(180deg, rgba(0, 201, 80, 0.208) 0%, rgba(0, 201, 81, 0) 55%);
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+
+    /* Center content a bit more for a cleaner, more “sectioned” feel */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+
+    .about-title-box,
+    .about-content-box {
+        background-color: rgba(1, 37, 16, 0.22);
+        padding: 35px 40px;
+        border-radius: 16px;
+        border: 1px solid rgba(0, 201, 80, 0.42);
+        box-shadow: 0 0 18px rgba(0, 201, 80, 0.18), inset 0 0 26px rgba(0, 201, 80, 0.06);
+
+        /* Use consistent sizing + remove large margins that can make spacing look “random” */
+        margin: 0;
+        max-width: 860px;
+        width: min(90%, 860px);
+    }
+
+    .about-title-box {
+        font-size: 28px;
+    }
+
+    .about-content-box {
+        font-size: 18px;
+        line-height: 1.8;
+    }
+
+    .about-button {
+        display: inline-block;
+        padding: 16px 34px;
+        background-color: rgba(2, 111, 45, 0.30);
+        color: #fff;
+        border: 1px solid rgba(0, 201, 80, 0.55);
+        border-radius: 12px;
+        text-decoration: none;
+        margin-top: 22px;
+        font-size: 18px;
+        font-weight: 600;
+        transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            background-color: rgba(0, 201, 80, 0.26);
+            box-shadow: 0 0 16px rgba(0, 201, 80, 0.20);
+        }
+    }
+}

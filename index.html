@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aldosimone Di Rosa</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/scss/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="/icons/icons8-a-cloud-32.png" type="image/png">
         <meta property="og:title" content="Aldosimone Di Rosa">
@@ -144,83 +144,115 @@
   </section>
 
 <!-- Section Skills -->
-<section id="skills" class="skills">
-    <div class="skills-header-box">My Skills</div>
-    <div class="skills-container">
-        <div class="skill-box">
-            <img src="/icons/html.png" alt="Skill 1 Icon">
-            <p>HTML</p>
-        </div>
-        <div class="skill-box">
-            <img src="/icons/css-file.png" alt="Skill 2 Icon">
-            <p>CSS - SCSS</p>
-        </div>
-        <div class="skill-box">
-            <img src="/icons/bootstrap.png" alt="Skill 3 Icon">
-            <p>Bootstrap</p>
-        </div>
-        <div class="skill-box">
-            <img src="/icons/java.png" alt="Skill 3 Icon">
-            <p>Java</p>
-        </div>
-        <div class="skill-box">
-            <img src="/icons/angular.png" alt="Skill 3 Icon">
-            <p>Angular</p>
-        </div>
-        <div class="skill-box">
-            <img src="/icons/swift.png" alt="Swift Icon">
-            <p>Swift</p>
-        </div>
+<section id="skills" class="skills" aria-label="Skills">
+  <div class="skills-header-box">Skills</div>
+
+  <p class="skills-subtitle">
+    Focused on building production-ready, user-centered web experiences. Keywords included for ATS/recruiters.
+  </p>
+
+  <div class="skills-container" role="list">
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Frontend</h3>
+      <ul class="skill-list">
+        <li>React (hooks, component architecture)</li>
+        <li>JavaScript / TypeScript</li>
+        <li>HTML5, CSS3, SCSS</li>
+        <li>Responsive UI, accessibility basics (ARIA)</li>
+        <li>Bootstrap</li>
+      </ul>
     </div>
+
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Backend</h3>
+      <ul class="skill-list">
+        <li>Java, Spring Boot</li>
+        <li>REST APIs, JWT auth, Spring Security</li>
+        <li>Hibernate / JPA</li>
+        <li>API integration & debugging</li>
+      </ul>
+    </div>
+
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Databases</h3>
+      <ul class="skill-list">
+        <li>PostgreSQL</li>
+        <li>Data modeling & relational concepts</li>
+        <li>Local development with Docker</li>
+      </ul>
+    </div>
+
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Mobile</h3>
+      <ul class="skill-list">
+        <li>Swift, iOS</li>
+        <li>UI flows, app lifecycle, media handling</li>
+        <li>App Store shipping & iteration</li>
+      </ul>
+    </div>
+
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Tools</h3>
+      <ul class="skill-list">
+        <li>Git / GitHub</li>
+        <li>Docker & Docker Compose</li>
+        <li>VS Code</li>
+      </ul>
+    </div>
+
+    <div class="skill-box" role="listitem">
+      <h3 class="skill-title">Working Style</h3>
+      <ul class="skill-list">
+        <li>Product mindset: ship, measure, iterate</li>
+        <li>Clean code, readable components, consistency</li>
+        <li>Collaboration & communication</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
-    <!-- Section Contact Me -->
-    <section id="contact" class="contact">
-    <div class="contact-container">
-        <div class="header-box">
-            <h2>Contact Me!</h2>
-        </div>
-        <p class="contact-subtitle">Best way to reach me: <a class="contact-email" href="mailto:aldosimone@live.com">aldosimone@live.com</a></p>
-        <div class="social-links">
-            <div class="social-icon">
-                <a href="https://www.facebook.com/Aldosimonedirosa/" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/facebook.png" alt="Facebook">
-                    <p>Facebook</p>
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://x.com/Aldosimone99" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/twitter.png" alt="Twitter">
-                    <p>X</p>
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://www.instagram.com/a.ldos/" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/instagram.png" alt="Instagram">
-                    <p>Instagram</p>
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/linkedin.png" alt="LinkedIn">
-                    <p>Linkedin</p>
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="https://github.com/Aldosimone99" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/github.png" alt="GitHub">
-                    <p>Github</p>
-                </a>
-            </div>
-            <div class="social-icon">
-                <a href="/Page2/contact-form.html" target="_blank" rel="noopener noreferrer">
-                    <img src="/icons/checklist.png" alt="Contact Form">
-                    <p>Contact Form</p>
-                </a>
-                </div>
-        </div>
+<!-- Section Contact -->
+<section id="contact" class="contact" aria-label="Contact">
+  <div class="contact-container">
+    <div class="header-box">
+      <h2>Get in touch</h2>
     </div>
-</section> 
+
+    <p class="contact-subtitle">
+      Open to frontend or full-stack roles (remote or hybrid). Fast response via email or LinkedIn.
+    </p>
+
+    <a class="contact-primary-email" href="mailto:aldosimone@live.com">aldosimone@live.com</a>
+    <p class="contact-microcopy">
+      Available for US-based remote opportunities · Timezone friendly (CET / EST overlap)
+    </p>
+
+    <div class="social-links social-links--primary" aria-label="Primary links">
+      <div class="social-icon social-icon--primary">
+        <a href="https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/linkedin.png" alt="LinkedIn">
+          <p>LinkedIn</p>
+        </a>
+      </div>
+
+      <div class="social-icon social-icon--primary">
+        <a href="https://github.com/Aldosimone99" target="_blank" rel="noopener noreferrer">
+          <img src="/icons/github.png" alt="GitHub">
+          <p>GitHub</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-secondary" aria-label="Other links">
+      <span class="contact-secondary-label">Elsewhere:</span>
+      <a href="https://moyafilm.it/" target="_blank" rel="noopener noreferrer">Moya website</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://x.com/Aldosimone99" target="_blank" rel="noopener noreferrer">X</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://www.instagram.com/a.ldos/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
+</section>
 <a class="skip-to-top" href="#home" aria-label="Back to top">Back to top</a>
 </body>
 </html>
