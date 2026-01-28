@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aldosimone Di Rosa</title>
-    <link rel="stylesheet" href="/scss/style.css">
+    <link rel="stylesheet" href="/style.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link rel="icon" href="/icons/icons8-a-cloud-32.png" type="image/png">
         <meta property="og:title" content="Aldosimone Di Rosa">
@@ -15,24 +15,27 @@
         <meta property="og:site_name" content="Aldo's Website">
 </head>
 <body>
-    <!-- Section Hero -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Hi I'm Aldo</h1>
-            <p>Welcome to my Website</p>
-        </div>
-    </section>
+<!-- Section Hero -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>Aldosimone Di Rosa</h1>
+    <p>Frontend Developer (React) · Full-Stack aware</p>
+  </div>
 
-<section class="nav-blocks">
-    <div class="nav-item">
+  <section class="nav-blocks" aria-label="Quick navigation">
+      <div class="nav-item">
         <a href="#about">About Me</a>
-    </div>
-    <div class="nav-item">
+      </div>
+      <div class="nav-item">
+        <a href="#projects">Projects</a>
+      </div>
+      <div class="nav-item">
         <a href="#skills">Skills</a>
-    </div>
-    <div class="nav-item">
+      </div>
+      <div class="nav-item">
         <a href="#contact">Contact me</a>
-    </div>
+      </div>
+    </section>
 </section>
 
     <!-- Section About Me -->
@@ -50,6 +53,67 @@
             <a href="/Page2/Cv.html" class="about-button">Download CV</a>
         </div>
     </section>
+
+  <!-- Section Projects -->
+  <section id="projects" class="projects">
+    <div class="projects-title-box">
+      <h1>Projects</h1>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <header class="project-header">
+          <h2>CityLife2</h2>
+          <p class="project-stack">Angular · Spring Boot · PostgreSQL · JWT</p>
+        </header>
+
+        <ul class="project-bullets">
+          <li>Full-stack social platform: auth, posts, comments, profiles, and user management.</li>
+          <li>Role-based authorization with JWT + Spring Security; REST API integration.</li>
+          <li>Dockerized database setup for local development.</li>
+        </ul>
+
+        <div class="project-links" role="group" aria-label="CityLife2 links">
+          <a href="https://github.com/Aldosimone99/CityLife2" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <header class="project-header">
+          <h2>CityLife</h2>
+          <p class="project-stack">Angular · TypeScript · REST</p>
+        </header>
+
+        <ul class="project-bullets">
+          <li>Frontend app focused on clean UI, routing, and component-driven architecture.</li>
+          <li>Responsive layout and reusable UI patterns.</li>
+        </ul>
+
+        <div class="project-links" role="group" aria-label="CityLife links">
+          <a href="https://github.com/Aldosimone99/CityLife" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <header class="project-header">
+          <h2>Portfolio</h2>
+          <p class="project-stack">HTML · CSS/SCSS · GitHub Pages</p>
+        </header>
+
+        <ul class="project-bullets">
+          <li>Single-page portfolio with section navigation and responsive layout.</li>
+          <li>Designed to quickly showcase projects, skills, and contact details.</li>
+        </ul>
+
+        <div class="project-links" role="group" aria-label="Portfolio links">
+          <a href="https://aldosimone99.github.io" target="_blank" rel="noopener noreferrer">Live</a>
+          <a href="https://github.com/Aldosimone99/Aldosimone99.github.io" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="projects-note">More work (including iOS apps) available on request.</p>
+  </section>
 
 <!-- Section Skills -->
 <section id="skills" class="skills">
@@ -88,45 +152,47 @@
         <div class="header-box">
             <h2>Contact Me!</h2>
         </div>
+        <p class="contact-subtitle">Best way to reach me: <a class="contact-email" href="mailto:aldosimone@live.com">aldosimone@live.com</a></p>
         <div class="social-links">
             <div class="social-icon">
-                <a href="https://www.facebook.com/Aldosimonedirosa/" target="_blank">
+                <a href="https://www.facebook.com/Aldosimonedirosa/" target="_blank" rel="noopener noreferrer">
                     <img src="/icons/facebook.png" alt="Facebook">
                     <p>Facebook</p>
                 </a>
             </div>
             <div class="social-icon">
-                <a href="https://x.com/Aldosimone99" target="_blank">
+                <a href="https://x.com/Aldosimone99" target="_blank" rel="noopener noreferrer">
                     <img src="/icons/twitter.png" alt="Twitter">
                     <p>X</p>
                 </a>
             </div>
             <div class="social-icon">
-                <a href="https://www.instagram.com/a.ldos/" target="_blank">
+                <a href="https://www.instagram.com/a.ldos/" target="_blank" rel="noopener noreferrer">
                     <img src="/icons/instagram.png" alt="Instagram">
                     <p>Instagram</p>
                 </a>
             </div>
             <div class="social-icon">
-                <a href="https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/" target="_blank">
+                <a href="https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/" target="_blank" rel="noopener noreferrer">
                     <img src="/icons/linkedin.png" alt="LinkedIn">
                     <p>Linkedin</p>
                 </a>
             </div>
             <div class="social-icon">
-                <a href="https://github.com/Aldosimone99" target="_blank">
-                    <img src="icons/github.png" alt="GitHub">
+                <a href="https://github.com/Aldosimone99" target="_blank" rel="noopener noreferrer">
+                    <img src="/icons/github.png" alt="GitHub">
                     <p>Github</p>
                 </a>
             </div>
             <div class="social-icon">
                 <a href="/Page2/contact-form.html" target="_blank">
-                    <img src="icons/checklist.png" alt="Contact Form">
+                    <img src="/icons/checklist.png" alt="Contact Form">
                     <p>Contact Form</p>
                 </a>
                 </div>
         </div>
     </div>
 </section> 
+<a class="skip-to-top" href="#home" aria-label="Back to top">Back to top</a>
 </body>
 </html>
