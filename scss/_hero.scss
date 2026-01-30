@@ -1,12 +1,19 @@
+/* Ensure iOS overscroll / safe-area doesn't show gray bars */
+html, body {
+    background-color: #14161A;
+}
+
 /* Section Hero */
 .hero {
     color: white;
     text-align: center;
+    /* Use dynamic viewport height on modern iOS to avoid top/bottom bars */
+    min-height: 100dvh;
     min-height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0;
+    padding: env(safe-area-inset-top) 0 0;
     margin: 0;
     background-color: #14161A;
     background-image: url('/2825810.gif');
@@ -14,7 +21,8 @@
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
-    padding-bottom: 120px;
+    /* Keep content clear of the bottom safe-area + nav blocks */
+    padding-bottom: calc(140px + env(safe-area-inset-bottom));
     position: relative;
 
     h1, p {
@@ -37,7 +45,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 140px;
+        height: calc(140px + env(safe-area-inset-bottom));
         background: linear-gradient(to bottom, rgba(20, 22, 26, 0), rgba(20, 22, 26, 1));
         pointer-events: none;
     }
@@ -170,8 +178,10 @@
 /* Mobile spacing adjustments */
 @media (max-width: 640px) {
   .hero {
-    padding: 0 16px;
-    padding-bottom: 140px;
+    /* On mobile, avoid vertical centering that can cause overlap */
+    justify-content: flex-start;
+    padding: calc(56px + env(safe-area-inset-top)) 16px 0;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
 
     h1 {
       font-size: 2.25rem;
@@ -185,7 +195,7 @@
     }
 
     &::after {
-      height: 92px;
+      height: calc(92px + env(safe-area-inset-bottom));
     }
   }
 
@@ -237,8 +247,8 @@
 
 @media (max-width: 380px) {
   .hero {
-    padding: 0 12px;
-    padding-bottom: 86px;
+    padding: calc(48px + env(safe-area-inset-top)) 12px 0;
+    padding-bottom: calc(22px + env(safe-area-inset-bottom));
 
     h1 {
       font-size: 2.05rem;
@@ -249,7 +259,7 @@
     }
 
     &::after {
-      height: 86px;
+      height: calc(86px + env(safe-area-inset-bottom));
     }
   }
 
