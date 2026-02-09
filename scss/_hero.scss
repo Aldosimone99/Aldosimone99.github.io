@@ -13,42 +13,20 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: env(safe-area-inset-top) 0 0;
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-left: 0;
+    padding-right: 0;
     margin: 0;
     background-color: #14161A;
     background-image: url('/2825810.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     overflow: hidden;
     /* Keep content clear of the bottom safe-area + nav blocks */
     padding-bottom: calc(140px + env(safe-area-inset-bottom));
     position: relative;
-
-    h1, p {
-        color: #fff;
-        font-family: '2P', sans-serif;
-    }
-
-    h1 {
-        font-size: 3.2rem;
-    }
-
-    p {
-        font-size: 22px;
-        margin-top: 10px;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        height: calc(140px + env(safe-area-inset-bottom));
-        background: linear-gradient(to bottom, rgba(20, 22, 26, 0), rgba(20, 22, 26, 1));
-        pointer-events: none;
-    }
 }
 
 /* Hero Content */
@@ -62,6 +40,9 @@ html, body {
     box-shadow: 0 0 18px rgba(255, 170, 0, 0.28), 0 0 48px rgba(255, 170, 0, 0.12);
     backdrop-filter: blur(6px);
     text-align: center;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-12px);
 }
 
 /* Optional hero CTA */
@@ -111,7 +92,7 @@ html, body {
     left: 50%;
     bottom: 28px;
     transform: translateX(-50%);
-    z-index: 10;
+    z-index: 20;
     background-color: transparent;
     width: min(980px, 100%);
 
@@ -204,6 +185,7 @@ html, body {
     padding: 22px 18px;
     border-radius: 14px;
     margin: 0 auto 14px;
+    transform: translateY(-24px);
   }
 
   .hero-cta {

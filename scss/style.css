@@ -9,12 +9,19 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100vh;
+  height: 100dvh;
+  background-color: #14161A;
+  padding: 0;
+  margin: 0;
 }
 
 html, body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 @font-face {
@@ -28,45 +35,35 @@ body {
   color: #333;
 }
 
+/* Ensure iOS overscroll / safe-area doesn't show gray bars */
+html, body {
+  background-color: #14161A;
+}
+
 /* Section Hero */
 .hero {
   color: white;
   text-align: center;
+  /* Use dynamic viewport height on modern iOS to avoid top/bottom bars */
+  min-height: 100dvh;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0;
+  padding-top: max(0px, env(safe-area-inset-top));
+  padding-left: 0;
+  padding-right: 0;
   margin: 0;
   background-color: #14161A;
   background-image: url("/2825810.gif");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   overflow: hidden;
-  padding-bottom: 120px;
+  /* Keep content clear of the bottom safe-area + nav blocks */
+  padding-bottom: calc(140px + env(safe-area-inset-bottom));
   position: relative;
-}
-.hero h1, .hero p {
-  color: #fff;
-  font-family: "2P", sans-serif;
-}
-.hero h1 {
-  font-size: 3.2rem;
-}
-.hero p {
-  font-size: 22px;
-  margin-top: 10px;
-}
-.hero::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 140px;
-  background: linear-gradient(to bottom, rgba(20, 22, 26, 0), rgb(20, 22, 26));
-  pointer-events: none;
 }
 
 /* Hero Content */
@@ -81,6 +78,9 @@ body {
   -webkit-backdrop-filter: blur(6px);
           backdrop-filter: blur(6px);
   text-align: center;
+  position: relative;
+  z-index: 10;
+  transform: translateY(-12px);
 }
 
 /* Optional hero CTA */
@@ -129,7 +129,7 @@ body {
   left: 50%;
   bottom: 28px;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 20;
   background-color: transparent;
   width: min(980px, 100%);
 }
@@ -189,8 +189,10 @@ body {
 /* Mobile spacing adjustments */
 @media (max-width: 640px) {
   .hero {
-    padding: 0 16px;
-    padding-bottom: 140px;
+    /* On mobile, avoid vertical centering that can cause overlap */
+    justify-content: flex-start;
+    padding: calc(56px + env(safe-area-inset-top)) 16px 0;
+    padding-bottom: calc(28px + env(safe-area-inset-bottom));
   }
   .hero h1 {
     font-size: 2.25rem;
@@ -202,13 +204,14 @@ body {
     margin-top: 10px;
   }
   .hero::after {
-    height: 92px;
+    height: calc(92px + env(safe-area-inset-bottom));
   }
   .hero-content {
     max-width: 100%;
     padding: 22px 18px;
     border-radius: 14px;
     margin: 0 auto 14px;
+    transform: translateY(-24px);
   }
   .hero-cta {
     gap: 10px;
@@ -245,8 +248,8 @@ body {
 }
 @media (max-width: 380px) {
   .hero {
-    padding: 0 12px;
-    padding-bottom: 86px;
+    padding: calc(48px + env(safe-area-inset-top)) 12px 0;
+    padding-bottom: calc(22px + env(safe-area-inset-bottom));
   }
   .hero h1 {
     font-size: 2.05rem;
@@ -255,7 +258,7 @@ body {
     font-size: 15px;
   }
   .hero::after {
-    height: 86px;
+    height: calc(86px + env(safe-area-inset-bottom));
   }
   .hero-content {
     padding: 20px 16px;
@@ -821,6 +824,14 @@ body {
   }
 }
 /* Media Queries */
+/* iOS Safari / notch safe-area: avoid gray status bar background */
+html,
+body {
+  background-color: #14161A;
+  padding: 0;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 45px;
