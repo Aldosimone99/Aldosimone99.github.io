@@ -30,6 +30,30 @@
             font-size: 14px;
             opacity: 0.8;
         }
+        .language-switcher {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        .language-btn {
+            padding: 8px 16px;
+            border: 2px solid #4ea1ff;
+            background-color: transparent;
+            color: #4ea1ff;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        .language-btn.active {
+            background-color: #4ea1ff;
+            color: #0f0f0f;
+        }
+        .language-btn:hover {
+            opacity: 0.8;
+        }
         .cv-frame {
             width: 100%;
             max-width: 900px;
@@ -40,6 +64,9 @@
         .download-link {
             margin-top: 12px;
             font-size: 14px;
+            display: flex;
+            gap: 16px;
+            justify-content: center;
         }
         .download-link a {
             color: #4ea1ff;
@@ -58,18 +85,40 @@
             <p>Frontend Developer (React) · Full-Stack aware · Open to US Remote</p>
         </div>
 
+        <div class="language-switcher">
+            <button class="language-btn active" onclick="switchLanguage('it')">🇮🇹 Italiano</button>
+            <button class="language-btn" onclick="switchLanguage('en')">🇬🇧 English</button>
+        </div>
+
         <iframe
+            id="cv-iframe"
             class="cv-frame"
-            src="/CV Aldosimone Di Rosa.pdf"
+            src="/CV Aldosimone Di Rosa IT.pdf"
             title="Aldosimone Di Rosa CV">
         </iframe>
 
         <div class="download-link">
-            <a href="/CV Aldosimone Di Rosa.pdf" target="_blank">
+            <a id="download-link" href="/CV Aldosimone Di Rosa IT.pdf" target="_blank">
                 Download CV (PDF)
             </a>
         </div>
     </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const pdfName = lang === 'it' 
+                ? '/CV Aldosimone Di Rosa IT.pdf' 
+                : '/CV Aldosimone Di Rosa EN.pdf';
+            
+            document.getElementById('cv-iframe').src = pdfName;
+            document.getElementById('download-link').href = pdfName;
+            
+            document.querySelectorAll('.language-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>

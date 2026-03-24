@@ -75,8 +75,7 @@ html, body {
   margin: 0 auto 20px;
   max-width: 780px;
   box-shadow: 0 0 18px rgba(255, 170, 0, 0.28), 0 0 48px rgba(255, 170, 0, 0.12);
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
   text-align: center;
   position: relative;
   z-index: 10;
@@ -545,16 +544,16 @@ html, body {
   flex-direction: column;
   min-height: 260px; /* keeps cards visually consistent */
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-  /* If you still use icons */
-  /* Old markup: title is inside a <p> */
-  /* New markup helpers */
-  /* Keep the “tags/links/footer” area visually anchored at bottom */
 }
 .skills-container .skill-box:hover,
 .skills-container .skill-card:hover {
   transform: translateY(-2px);
   border-color: rgba(255, 193, 7, 0.55);
   box-shadow: 0 0 14px rgba(255, 193, 7, 0.16);
+}
+.skills-container .skill-box,
+.skills-container .skill-card {
+  /* If you still use icons */
 }
 .skills-container .skill-box img,
 .skills-container .skill-card img {
@@ -564,12 +563,20 @@ html, body {
   display: block;
   opacity: 0.95;
 }
+.skills-container .skill-box,
+.skills-container .skill-card {
+  /* Old markup: title is inside a <p> */
+}
 .skills-container .skill-box p,
 .skills-container .skill-card p {
   margin: 0;
   font-size: 17px;
   font-weight: 750;
   line-height: 1.4;
+}
+.skills-container .skill-box,
+.skills-container .skill-card {
+  /* New markup helpers */
 }
 .skills-container .skill-box .skill-title,
 .skills-container .skill-card .skill-title {
@@ -597,6 +604,10 @@ html, body {
   font-size: 15px;
   line-height: 1.6;
   opacity: 0.95;
+}
+.skills-container .skill-box,
+.skills-container .skill-card {
+  /* Keep the “tags/links/footer” area visually anchored at bottom */
 }
 .skills-container .skill-box .skill-footer,
 .skills-container .skill-card .skill-footer {
