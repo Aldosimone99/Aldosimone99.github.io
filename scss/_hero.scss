@@ -1,255 +1,135 @@
-/* Ensure iOS overscroll / safe-area doesn't show gray bars */
-html, body {
-    background-color: #14161A;
-}
-
-/* Section Hero */
 .hero {
-    color: white;
-    text-align: center;
-    /* Use dynamic viewport height on modern iOS to avoid top/bottom bars */
-    min-height: 100dvh;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: max(0px, env(safe-area-inset-top));
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
-    background-color: #14161A;
-    background-image: url('/2825810.gif');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-    /* Keep content clear of the bottom safe-area + nav blocks */
-    padding-bottom: calc(140px + env(safe-area-inset-bottom));
-    position: relative;
+  position: relative;
+  display: flex;
+  min-height: calc(100svh - var(--header-height));
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  background-color: #101217;
+  background-image: url('/2825810.gif');
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
 }
 
-/* Hero Content */
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(8, 10, 16, 0.42), rgba(8, 10, 16, 0.75) 72%),
+    linear-gradient(180deg, rgba(8, 10, 16, 0.18), rgba(8, 10, 16, 0.58));
+  content: '';
+}
+
+.hero-inner {
+  width: min(100%, 980px);
+  margin: auto;
+  padding: clamp(48px, 8vh, 88px) 24px;
+}
+
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.68);
-    color: white;
-    padding: 48px 40px;
-    border-radius: 14px;
-    margin: 0 auto 20px;
-    max-width: 780px;
-    box-shadow: 0 0 18px rgba(255, 170, 0, 0.28), 0 0 48px rgba(255, 170, 0, 0.12);
-    backdrop-filter: blur(6px);
-    text-align: center;
-    position: relative;
-    z-index: 10;
-    transform: translateY(-12px);
+  max-width: 840px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 58px) clamp(22px, 6vw, 70px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  background: rgba(8, 10, 16, 0.78);
+  box-shadow: 0 24px 90px rgba(0, 0, 0, 0.38), 0 0 42px rgba(77, 167, 210, 0.08);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
-/* Optional hero CTA */
+.hero-eyebrow {
+  margin: 0 0 16px;
+  color: #c8e9f8;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: clamp(36px, 7.1vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.065em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+
+.hero-role {
+  margin: 16px 0 0;
+  color: var(--blue);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 750;
+  letter-spacing: 0.01em;
+}
+
+.hero-description {
+  max-width: 620px;
+  margin: 18px auto 0;
+  color: #f1f2f5;
+  font-size: clamp(16px, 2vw, 19px);
+  line-height: 1.65;
+  text-wrap: pretty;
+}
+
 .hero-cta {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 16px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 26px;
 }
 
-.hero-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.65);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+.hero-cta-btn--primary {
+  border-color: #69c9f1;
+  background: linear-gradient(135deg, #1877a0, #155979);
+  box-shadow: 0 8px 28px rgba(36, 157, 204, 0.2);
+}
 
-    &:hover {
-        transform: translateY(-2px);
-        background: rgba(0, 0, 0, 0.75);
-        box-shadow: 0 0 16px rgba(255, 170, 0, 0.18);
-    }
+.hero-cta-btn--primary:hover {
+  background: linear-gradient(135deg, #218bb7, #17688c);
 }
 
 .hero-meta {
-    margin-top: 14px;
-    font-size: 14px;
-    opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 22px 0 0;
+  color: #d5d9e1;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-/* Navigation Blocks */
-.nav-blocks {
-    display: flex;
-    flex-direction: row;
-    gap: 18px;
-    flex-wrap: wrap;
-    row-gap: 14px;
-    padding: 0 20px;
-    justify-content: center;
-    position: absolute;
-    left: 50%;
-    bottom: 28px;
-    transform: translateX(-50%);
-    z-index: 20;
-    background-color: transparent;
-    width: min(980px, 100%);
-
-    .nav-item {
-        position: relative;
-        background-color: rgba(0, 0, 0, 0.78);
-        padding: 18px 18px;
-        width: 230px;
-        height: 88px;
-        margin-bottom: 0;
-        text-align: center;
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-
-        &:nth-child(1) {
-            border-color: rgba(76, 175, 80, 0.65);
-            box-shadow: 0 0 14px rgba(76, 175, 80, 0.25);
-        }
-
-        &:nth-child(2) {
-            border-color: rgba(0, 191, 255, 0.65);
-            box-shadow: 0 0 14px rgba(0, 191, 255, 0.22);
-        }
-
-        &:nth-child(3) {
-            border-color: rgba(255, 193, 7, 0.70);
-            box-shadow: 0 0 14px rgba(255, 193, 7, 0.20);
-        }
-
-        &:nth-child(4) {
-            border-color: rgba(255, 99, 132, 0.65);
-            box-shadow: 0 0 14px rgba(255, 99, 132, 0.22);
-        }
-
-        &:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 0 18px rgba(255, 255, 255, 0.12);
-        }
-
-        a {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.05rem;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            line-height: 1;
-            letter-spacing: 0.4px;
-            height: 100%;
-            width: 100%;
-            border-radius: 10px;
-            position: relative;
-        }
-    }
+.availability-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 8px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(85, 217, 138, 0.65);
 }
 
-/* Mobile spacing adjustments */
-@media (max-width: 640px) {
-  .hero {
-    /* On mobile, avoid vertical centering that can cause overlap */
-    justify-content: flex-start;
-    padding: calc(56px + env(safe-area-inset-top)) 16px 0;
-    padding-bottom: calc(28px + env(safe-area-inset-bottom));
-
-    h1 {
-      font-size: 2.25rem;
-      line-height: 1.08;
-    }
-
-    p {
-      font-size: 16px;
-      line-height: 1.35;
-      margin-top: 10px;
-    }
-
-    &::after {
-      height: calc(92px + env(safe-area-inset-bottom));
-    }
-  }
-
-  .hero-content {
-    max-width: 100%;
-    padding: 22px 18px;
-    border-radius: 14px;
-    margin: 0 auto 14px;
-    transform: translateY(-24px);
-  }
-
-  .hero-cta {
-    gap: 10px;
-    margin-top: 14px;
-  }
-
-  .hero-cta-btn {
-    padding: 11px 14px;
-    border-radius: 12px;
-  }
-
-  .hero-meta {
-    margin-top: 12px;
-    font-size: 13px;
-  }
-
-  .nav-blocks {
-    position: static;
-    transform: none;
-    width: 100%;
-    padding: 0 8px;
-    margin: 12px auto 0;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav-blocks .nav-item {
-    width: min(520px, 100%);
-    height: 66px;
-    padding: 14px 14px;
-    border-radius: 14px;
-  }
-
-  .nav-blocks .nav-item a {
-    font-size: 1rem;
-    gap: 8px;
-  }
+.hero-scroll {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 28px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
-@media (max-width: 380px) {
-  .hero {
-    padding: calc(48px + env(safe-area-inset-top)) 12px 0;
-    padding-bottom: calc(22px + env(safe-area-inset-bottom));
-
-    h1 {
-      font-size: 2.05rem;
-    }
-
-    p {
-      font-size: 15px;
-    }
-
-    &::after {
-      height: calc(86px + env(safe-area-inset-bottom));
-    }
-  }
-
-  .hero-content {
-    padding: 20px 16px;
-  }
-
-  .nav-blocks .nav-item {
-    height: 62px;
-  }
+.hero-scroll span {
+  color: var(--blue);
+  font-size: 18px;
 }

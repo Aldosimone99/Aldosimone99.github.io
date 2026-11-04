@@ -1,0 +1,50 @@
+.services {
+  --section-accent: #8ed8f5;
+  background:
+    radial-gradient(ellipse at 50% 0, rgba(39, 82, 105, 0.22), transparent 56%),
+    linear-gradient(180deg, rgba(13, 18, 23, 0), rgba(15, 20, 25, 0.4));
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.service-card {
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid rgba(142, 216, 245, 0.2);
+  border-radius: 16px;
+  background: linear-gradient(145deg, rgba(19, 29, 36, 0.82), rgba(14, 18, 23, 0.84));
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(142, 216, 245, 0.42);
+  background: linear-gradient(145deg, rgba(24, 40, 49, 0.88), rgba(14, 18, 23, 0.9));
+}
+
+.service-index {
+  display: inline-block;
+  margin-bottom: 18px;
+  color: #83d1f3;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.service-card p {
+  margin: 9px 0 0;
+  color: #c5cbd4;
+  font-size: 13px;
+  line-height: 1.65;
+}

@@ -1,67 +1,58 @@
-/* Section About */
 .about {
-    /* Ensure the section fills the viewport when navigated via #about */
-    min-height: 100vh;
+  --section-accent: var(--green);
+  background: linear-gradient(180deg, rgba(19, 66, 43, 0.24), rgba(16, 18, 23, 0) 48%);
+}
 
-    /* Prevent the next section from peeking in when landing here */
-    padding: 120px 40px 120px;
+.about .section-heading {
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
 
-    /* Improve anchor navigation behavior */
-    scroll-margin-top: 24px;
+.about-content-box {
+  width: min(100%, 900px);
+  margin: 0 auto;
+  padding: clamp(24px, 4vw, 42px);
+  border: 1px solid rgba(85, 217, 138, 0.3);
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(11, 37, 24, 0.62), rgba(14, 20, 20, 0.8));
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.04), 0 18px 54px rgba(0, 0, 0, 0.18);
+}
 
-    background: linear-gradient(180deg, rgba(0, 201, 80, 0.208) 0%, rgba(0, 201, 81, 0) 55%);
-    text-align: center;
-    color: #fff;
-    position: relative;
-    z-index: 1;
+.about-content-box p {
+  margin: 0 0 16px;
+  color: #e0e5e2;
+  font-size: clamp(16px, 1.7vw, 18px);
+  line-height: 1.8;
+}
 
-    /* Center content a bit more for a cleaner, more “sectioned” feel */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 22px;
+.about-content-box p:first-child {
+  color: #fff;
+  font-size: clamp(18px, 2.1vw, 22px);
+  font-weight: 700;
+  line-height: 1.6;
+}
 
-    .about-title-box,
-    .about-content-box {
-        background-color: rgba(1, 37, 16, 0.22);
-        padding: 35px 40px;
-        border-radius: 16px;
-        border: 1px solid rgba(0, 201, 80, 0.42);
-        box-shadow: 0 0 18px rgba(0, 201, 80, 0.18), inset 0 0 26px rgba(0, 201, 80, 0.06);
+.about-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 11px 18px;
+  border: 1px solid rgba(85, 217, 138, 0.55);
+  border-radius: 12px;
+  background: rgba(20, 80, 48, 0.36);
+  color: #effff5;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
 
-        /* Use consistent sizing + remove large margins that can make spacing look “random” */
-        margin: 0;
-        max-width: 860px;
-        width: min(90%, 860px);
-    }
-
-    .about-title-box {
-        font-size: 28px;
-    }
-
-    .about-content-box {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    .about-button {
-        display: inline-block;
-        padding: 16px 34px;
-        background-color: rgba(2, 111, 45, 0.30);
-        color: #fff;
-        border: 1px solid rgba(0, 201, 80, 0.55);
-        border-radius: 12px;
-        text-decoration: none;
-        margin-top: 22px;
-        font-size: 18px;
-        font-weight: 600;
-        transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
-
-        &:hover {
-            transform: translateY(-2px);
-            background-color: rgba(0, 201, 80, 0.26);
-            box-shadow: 0 0 16px rgba(0, 201, 80, 0.20);
-        }
-    }
+.about-button:hover {
+  transform: translateY(-2px);
+  border-color: var(--green);
+  background: rgba(35, 110, 69, 0.48);
 }

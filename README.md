@@ -1,136 +1,69 @@
-# Aldosimone Di Rosa — Personal Portfolio
+# Aldosimone Di Rosa — Developer Portfolio
 
-🌐 **Live Website**  
-https://aldosimone99.github.io
+Personal portfolio for [aldosimone99.github.io](https://aldosimone99.github.io), presenting my work as a Full Stack Developer building SaaS products and web applications.
 
-This repository contains the source code of my **personal portfolio website**, designed to present my profile as a **Frontend Developer (React) with Full-Stack experience**.
-
-The portfolio is built as a **single-page application (SPA)** and optimized for **US-based recruiters and hiring managers**, with a focus on clarity, fast scanning, and direct access to live projects and contact information.
-
----
-
-## Overview
-
-The website follows a clean, recruiter-friendly structure while preserving a distinctive visual identity.
-
-Main goals:
-- Communicate my professional profile in under 30 seconds
-- Highlight **production-ready projects** (web & mobile)
-- Showcase a modern frontend skill set with full-stack awareness
-- Make contact simple and frictionless
-
----
-
-## Sections
-
-### 🏠 Hero
-- Clear professional headline
-- Immediate positioning as Frontend / Full-Stack Developer
-- Quick navigation to key sections
-
----
-
-### 👤 About Me
-- Short professional summary
-- Career transition from maritime officer to software development
-- Focus on motivation, continuous learning, and long-term growth
-- Direct access to my **Curriculum Vitae**
-
----
-
-### 🧩 Projects
-
-Selected, relevant projects are highlighted:
-
-- **CityLife2** — Full-Stack Web Application  
-  Angular frontend + Spring Boot backend, JWT authentication, PostgreSQL, Docker
-
-- **Moya** — iOS App (Live on the App Store)  
-  Video & photo editing app with a dedicated website: https://moyafilm.it
-
-- **Mariner Hub** — iOS App (Live on the App Store)  
-  Utility app designed for maritime professionals
-
-Each project card includes a concise description and direct links (GitHub, website, or App Store).
-
----
-
-### 🛠 Skills
-
-Skills are organized in recruiter- and ATS-friendly categories:
-
-- **Frontend**: React, JavaScript / TypeScript, HTML5, CSS3, SCSS, Responsive UI
-- **Backend**: Java, Spring Boot, REST APIs, JWT, Spring Security, JPA
-- **Databases**: PostgreSQL, relational modeling
-- **Mobile**: Swift, iOS app lifecycle, App Store deployment
-- **Tools**: Git, GitHub, Docker, Docker Compose, VS Code
-- **Working Style**: clean code, product mindset, collaboration
-
----
-
-### 📬 Contact
-
-The contact section is intentionally minimal and professional:
-
-- **Email** (primary contact)
-- **LinkedIn**
-- **GitHub**
-
-Additional links are kept secondary.
-
-Micro-copy highlights availability:
-
-> Available for US-based remote opportunities · Timezone friendly (CET / EST overlap)
-
----
-
-## Tech Stack
-
-- **HTML5**
-- **CSS3 / SCSS**
-- **JavaScript**
-- **GitHub Pages** (deployment)
-
----
-
-## Project Structure
+## Project structure
 
 ```text
 /
-├── index.html
-├── /scss
-│   └── style.css
-├── /icons
-│   └── UI and social icons
-├── /Page2
-│   └── Cv.html
+├── index.html                 # Portfolio content and project data
+├── scss/                      # Sass source and compiled stylesheet
+│   ├── style.scss             # Sass entry point
+│   ├── style.css              # CSS served by GitHub Pages
+│   └── _*.scss                # Section and responsive styles
+├── fonts/                     # Locally hosted fonts
+├── icons/                     # Social and technology icons
+├── 2825810.gif                # Pixel-art hero background
+├── OpenGraph.png              # Social sharing image
+├── robots.txt                 # Search crawler rules
+├── sitemap.xml                # Public page URLs
+├── Page2/                     # CV page
+└── CV Aldosimone Di Rosa *.pdf
 ```
 
----
+The site is static HTML and CSS with Sass as a build-time tool. It has no client-side framework or runtime JavaScript dependency. The tracked `scss/style.css` is the stylesheet linked by the homepage.
 
-## Purpose
+## Local development
 
-This portfolio is intended to:
+Install dependencies and compile the stylesheet:
 
-- Support applications for **US-based and international remote roles**
-- Act as a single entry point for recruiters
-- Provide quick access to live projects and code
-- Demonstrate frontend sensibility with full-stack foundations
+```bash
+npm ci
+npm run build
+```
 
----
+To recompile Sass while editing:
 
-## Author
+```bash
+npm run watch
+```
 
-**Aldosimone Di Rosa**  
-Frontend Developer (React) · Full-Stack aware  
-📍 Italy · 🌍 Open to US Remote
+Open `index.html` in a local static server to check root-relative assets and links. For example, `python3 -m http.server 8000` serves the project root at `http://127.0.0.1:8000/`. The site expects to be hosted at the domain root, as it is on GitHub Pages.
+
+## Build
+
+`npm run build` compiles `scss/style.scss` to `scss/style.css` and updates the source map. Commit both generated files along with Sass source changes so GitHub Pages serves the latest styles.
+
+## GitHub Pages deployment
+
+GitHub Pages serves the repository root from the `main` branch. Pushing changes to `main` publishes the static files; there is no separate application build or deployment workflow. Before publishing Sass changes, run `npm run build` and commit the updated CSS output.
+
+## Updating portfolio projects
+
+Edit the project cards in `index.html`:
+
+- The featured Beauty Broker World card appears first in `#projects`.
+- CityLife and React Dashboard are grouped under “Other Projects”.
+- Keep links tied to public project pages or public repositories. Do not add private repositories, credentials, client or patient information, or unsupported outcome claims.
+- Keep copy clear about project status and use only links that are publicly accessible.
+
+## Adding or replacing screenshots
+
+The Beauty Broker World card currently uses its logo because no approved application screenshots are included. To add a product screenshot, place an approved, public-safe image in `images/projects/` and replace the logo in `.project-visual` in `index.html`. Use descriptive alt text, set width and height (or an aspect ratio in CSS) to avoid layout shift, and use `loading="lazy"` for images below the hero. Use anonymized demo data; never include patient information, credentials, or confidential business screens.
+
+## Contact
 
 - Portfolio: https://aldosimone99.github.io
 - GitHub: https://github.com/Aldosimone99
 - LinkedIn: https://www.linkedin.com/in/aldosimone-di-rosa-b5a55716b/
-
----
-
-## License
-
-This project is intended for personal and professional presentation purposes.
+- Email: aldosimone@live.com

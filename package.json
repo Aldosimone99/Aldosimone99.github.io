@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build": "sass scss/style.scss scss/style.css --style=expanded --source-map",
+    "watch": "sass --watch scss/style.scss:scss/style.css"
+  },
   "dependencies": {
     "bootstrap": "^5.3.3",
     "sass": "^1.93.2"
