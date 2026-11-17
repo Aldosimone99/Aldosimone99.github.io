@@ -7,13 +7,15 @@ Personal portfolio for [aldosimone99.github.io](https://aldosimone99.github.io),
 ```text
 /
 ├── index.html                 # Portfolio content and project data
+├── projects/beauty-broker-world/index.html # Text-first BBW case study
 ├── scss/                      # Sass source and compiled stylesheet
 │   ├── style.scss             # Sass entry point
 │   ├── style.css              # CSS served by GitHub Pages
 │   └── _*.scss                # Section and responsive styles
 ├── fonts/                     # Locally hosted fonts
 ├── icons/                     # Social and technology icons
-├── 2825810.gif                # Pixel-art hero background
+├── assets/                    # Local motion layer and mobile navigation
+├── 2825810.gif                # Archived pixel-art asset (not loaded)
 ├── OpenGraph.png              # Social sharing image
 ├── robots.txt                 # Search crawler rules
 ├── sitemap.xml                # Public page URLs
@@ -22,6 +24,10 @@ Personal portfolio for [aldosimone99.github.io](https://aldosimone99.github.io),
 ```
 
 The site is static HTML and CSS with Sass as a build-time tool. It has no client-side framework or runtime JavaScript dependency. The tracked `scss/style.css` is the stylesheet linked by the homepage.
+
+The Studio design uses a charcoal background, warm paper project section and lime accent. `scss/_base.scss` contains the shared tokens and local font declarations, `scss/_studio.scss` styles the homepage, and `scss/_case-study.scss` styles the Beauty Broker World case study. The other section partials are retained as legacy source and are not imported by `scss/style.scss`.
+
+DM Sans and Instrument Serif are served locally as WOFF2 files; their licenses are in `fonts/dmsans-OFL.txt` and `fonts/instrumentserif-OFL.txt`. The public BBW logo is served as WebP while its PNG source is preserved. The small motion layer in `assets/motion/` supplies hover, press and hero entrance behavior and honors reduced-motion preferences. `assets/site.js` enhances the native mobile menu with keyboard navigation, Escape, focus restoration and background scroll locking.
 
 ## Local development
 
@@ -50,16 +56,19 @@ GitHub Pages serves the repository root from the `main` branch. Pushing changes 
 
 ## Updating portfolio projects
 
-Edit the project cards in `index.html`:
+Edit the featured project and project rows in `index.html`:
 
-- The featured Beauty Broker World card appears first in `#projects`.
-- CityLife and React Dashboard are grouped under “Other Projects”.
+- The featured Beauty Broker World section appears first in `#projects`.
+- CityLife, React Dashboard, and Moya are grouped under “More experiments”.
 - Keep links tied to public project pages or public repositories. Do not add private repositories, credentials, client or patient information, or unsupported outcome claims.
 - Keep copy clear about project status and use only links that are publicly accessible.
 
-## Adding or replacing screenshots
+## Project imagery and confidentiality
 
-The Beauty Broker World card currently uses its logo because no approved application screenshots are included. To add a product screenshot, place an approved, public-safe image in `images/projects/` and replace the logo in `.project-visual` in `index.html`. Use descriptive alt text, set width and height (or an aspect ratio in CSS) to avoid layout shift, and use `loading="lazy"` for images below the hero. Use anonymized demo data; never include patient information, credentials, or confidential business screens.
+- Beauty Broker World is presented with its existing official logo and public website link. Never add screenshots or mockups of its application, dashboards, administration, messaging, payments, or authenticated areas, even if they are anonymized or use demo data.
+- Do not publish proprietary code, private APIs, database schemas, security details, or confidential business information.
+- The repository currently has no Moya screenshots. Do not invent or generate app screens, and do not add an App Store link unless the app is actually published there.
+- For other projects, use only authentic screenshots that are available in the repository and approved for public use. Add descriptive alt text and image dimensions to prevent layout shift.
 
 ## Contact
 

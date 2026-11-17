@@ -7,16 +7,26 @@
 
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 14px;
 }
 
 .skill-box {
+  grid-column: span 2;
   min-width: 0;
+  min-height: 100%;
   padding: 24px;
   border: 1px solid rgba(240, 199, 94, 0.24);
   border-radius: 16px;
   background: linear-gradient(145deg, rgba(32, 29, 20, 0.68), rgba(17, 18, 19, 0.82));
+}
+
+.skill-box:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.skill-box:nth-child(5) {
+  grid-column: 4 / span 2;
 }
 
 .skill-box--primary {

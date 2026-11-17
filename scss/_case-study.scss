@@ -1,0 +1,48 @@
+.case-header { display: flex; justify-content: space-between; align-items: center; gap: 24px; max-width: 1440px; margin: auto; padding: 27px 5.4%; }
+.case-back-link { display: inline-flex; align-items: center; min-height: 44px; gap: 10px; color: var(--muted); font-size: 13px; text-decoration: none; }
+.case-back-link:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 5px; }
+.case-container { width: min(89.2%, var(--content-width)); margin-inline: auto; }
+.case-hero { padding-block: clamp(45px, 7vw, 95px) 65px; }
+.case-hero-layout { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: clamp(30px, 5vw, 70px); align-items: center; }
+.case-kicker { color: var(--muted); font-size: 11px; line-height: 1.7; letter-spacing: .1em; text-transform: uppercase; }
+.case-kicker span { margin-inline: 5px; }
+.case-status { display: flex; align-items: center; gap: 9px; margin-top: 24px; color: var(--muted); font-size: 12px; }
+.case-hero h1 { margin-top: 24px; font-size: clamp(42px, 6.5vw, 92px); font-weight: 500; line-height: .98; letter-spacing: -.055em; }
+.case-hero h1 em { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; font-size: 1.13em; }
+.case-hero-description { max-width: 590px; margin-top: 24px; color: var(--muted); font-size: 16px; line-height: 1.85; }
+.case-scroll-link { display: inline-flex; align-items: center; min-height: 48px; gap: 24px; margin-top: 24px; border-bottom: 1px solid var(--line); font-size: 13px; text-decoration: none; }
+.case-scroll-link:hover { border-color: currentColor; }
+.case-brand-panel { position: relative; display: flex; align-items: center; justify-content: center; isolation: isolate; aspect-ratio: 1; overflow: hidden; background: #fefdf9; }
+.case-brand-panel img { width: 69%; mix-blend-mode: multiply; }
+.case-brand-orbit { position: absolute; z-index: -1; width: 91%; aspect-ratio: 1; border: 1px solid #e7e4db; border-radius: 50%; }
+.case-brand-orbit--inner { width: 75%; }
+.case-content { padding-block: 0 45px; }
+.case-section { display: grid; grid-template-columns: minmax(130px, .28fr) minmax(0, 1fr); gap: clamp(25px, 5vw, 70px); padding-block: 45px; border-top: 1px solid var(--line); }
+.case-section-index { margin-top: 6px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.case-section-index span { margin-inline: 4px; color: var(--accent); }
+.case-section-body h2 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
+.case-section-body p { max-width: 790px; margin-top: 18px; color: var(--muted); font-size: 16px; line-height: 1.85; }
+.case-tech-list, .capability-list { display: flex; flex-wrap: wrap; gap: 10px 24px; padding: 0; margin: 24px 0 0; list-style: none; }
+.case-tech-list li { color: var(--ink); font-size: 14px; }
+.capability-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 30px; }
+.capability-list li { padding: 15px 0; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 14px; }
+.case-links { --bg: #c5f36b; --ink: #152109; --muted: #32471c; --action: #152109; --action-ink: #f0f0e8; --line: #56742c; padding-block: 55px; margin-bottom: 30px; background: var(--bg); color: var(--ink); }
+.case-links :is(a, button):focus-visible { outline-color: var(--ink); }
+.case-links h2 { max-width: 700px; margin-top: 20px; font-family: 'Instrument Serif', Georgia, serif; font-size: clamp(36px, 4.5vw, 58px); font-style: italic; font-weight: 400; line-height: 1.1; letter-spacing: -.035em; }
+.case-links-inner > p:not(.case-kicker) { margin-top: 20px; font-size: 15px; }
+.case-links-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 15px 24px; margin-top: 28px; }
+@media(max-width:700px) {
+ .case-header { padding-block: 20px; }
+ .case-back-link { font-size: 12px; }
+ .case-hero { padding-block: 35px 45px; }
+ .case-hero-layout { grid-template-columns: 1fr; gap: 35px; }
+ .case-hero h1 { font-size: clamp(42px, 10.7vw, 65px); }
+ .case-hero-description { font-size: 15px; }
+ .case-brand-panel { aspect-ratio: 1.25; }
+ .case-brand-panel img { width: 56%; }
+ .case-section { grid-template-columns: 1fr; gap: 16px; padding-block: 32px; }
+ .case-section-body p { font-size: 15px; }
+ .capability-list { grid-template-columns: 1fr; }
+ .case-links-actions { flex-direction: column; align-items: stretch; }
+ .case-links-actions .text-link { justify-content: center; }
+}

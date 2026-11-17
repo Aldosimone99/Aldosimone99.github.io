@@ -1,18 +1,4 @@
-// Main stylesheet - imports all SCSS files
-
-// Variables
-@use 'variables' as *;
-
-// Base styles
-@use 'base' as *;
-
-// Sections
-@use 'hero' as *;
-@use 'about' as *;
-@use 'projects' as *;
-@use 'skills' as *;
-@use 'services' as *;
-@use 'contacts' as *;
-
-// Responsive design
-@use 'media-queries' as *;
+// Studio direction approved in the portfolio mockup.
+@use 'base';
+@use 'studio';
+@use 'case-study';

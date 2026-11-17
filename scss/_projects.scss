@@ -51,7 +51,10 @@
 }
 
 .project-visual--bbw {
+  background-color: #13212a;
   background:
+    radial-gradient(circle at 50% 50%, transparent 31%, rgba(151, 215, 225, 0.12) 31.2%, transparent 31.6%),
+    radial-gradient(circle at 50% 50%, transparent 44%, rgba(151, 215, 225, 0.08) 44.2%, transparent 44.6%),
     radial-gradient(ellipse at 50% 55%, rgba(54, 175, 201, 0.3), transparent 42%),
     linear-gradient(145deg, #17353c, #10161d 64%, #211825);
 }
@@ -196,7 +199,7 @@
 }
 
 .other-projects {
-  margin-top: 74px;
+  margin-top: 54px;
 }
 
 .other-projects-heading {
@@ -221,7 +224,7 @@
 
 .other-projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -233,6 +236,49 @@
   border: 1px solid rgba(88, 198, 245, 0.18);
   border-radius: 16px;
   background: rgba(11, 17, 23, 0.72);
+}
+
+.other-project-card--moya {
+  border-color: rgba(240, 199, 94, 0.3);
+  background: linear-gradient(145deg, rgba(42, 35, 21, 0.72), rgba(17, 18, 19, 0.82));
+}
+
+.moya-wordmark {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 18px;
+  color: #f0d38a;
+}
+
+.moya-wordmark span {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.07em;
+  line-height: 1;
+}
+
+.moya-wordmark i {
+  width: 34px;
+  height: 1px;
+  background: rgba(240, 211, 138, 0.65);
+}
+
+.moya-capabilities {
+  margin: 12px 0 0;
+  color: #e5d7b6;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.other-project-card--moya .tech-list {
+  margin-top: 14px;
+}
+
+.other-project-card--moya .tech-list li {
+  border-color: rgba(240, 199, 94, 0.24);
+  background: rgba(240, 199, 94, 0.07);
+  color: #f2dea7;
 }
 
 .other-project-card h4 {
